@@ -1,0 +1,112 @@
+# create a new project
+cargo new <name>
+
+# build a project
+cd <name>
+cargo build
+
+# run a debug project
+./target/debug/<name>.exe
+OR
+cargo run
+
+# adding new packages
+=> update cargo.toml [dependencies] section with new packages
+=> run cargo update
+
+
+
+# variables
+let mut <name> = <type>;
+
+# user entry
+use std::io;
+io::stdin().real_line(&mut line).expect(<error>)
+
+# output
+println!(<value>, <value2>)
+# with string interpolation
+let x = 5; let y = 10;
+println!("x = {x} and y + 2 = {}", y + 2);
+
+# random numbers
+[dependencies]
+rand = "0.8.5"
+
+use rand::Rng;
+rand::thread_rng().gen_range(1..=100)
+
+# comparisons
+use std::cmp::Ordering;
+match <value>.cmp(&<value2>) {
+  Ordering::Less => ...,
+  Ordering::Greater => ...,
+  Ordering::Equal => ...,
+}
+
+# string manipulation
+let num: u32 = <string>.trim().parse.expect(<error>);
+
+# conditional - if
+if <condition> {
+  ...
+} else {
+  ...
+}
+
+# pseudo-ternary 
+let number = if condition { 1 } else { 2 };
+
+# loops
+loop {
+  ...
+  break;
+}
+# with values
+let result = loop {
+  ...
+  break <value>;
+}
+# with labels
+'outer': loop {
+  ...
+  loop {
+    ...
+    break 'outer';
+  }
+}
+# while
+while <condition> {
+  ...
+}
+# iterating collections
+let a = [1,2,3,4,5]
+for item in a {
+  ...
+}
+
+# data types
+## scalars - int, float, num, bool, char
+## int - signed / unsigned i/u 8,16,32,64,128,size
+## float - f 32,64
+## bool - true, false
+## char - letters, numbers, characters, including emoji!! (use single quotes and strings use double quotes)
+
+## compound types - tuple
+## tuple - let (<type>, <type>, <type>) = (<value>, <value>, <value>);
+## array - let a = [<value>, <value>, <value>]; let a: [i32; 5] = [1,2,3,4,5]; let a = [3; 5];
+### range - (1...100)
+### other array tricks, .rev()
+
+# functions
+fn <name>(<param>: <type>, <param>: <type>) {
+}
+# "statements" - functions that do not return a value
+# "expressions" - evaluate to a return value
+
+## with return values - returns value of last expression in function
+fn <name>() -> <return type> {
+  <value>
+}
+
+# comments - double forward slash //

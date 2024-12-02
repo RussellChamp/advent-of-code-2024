@@ -1,0 +1,21 @@
+// Day #DAY#: #TITLE#
+
+use std::env;
+use std::fs;
+
+fn solve_part1() {
+  println!("Day #DAY#: Part 1");
+  println!("GOAL: #GOAL1#");
+  println!("ANSWER: #ANSWER1#");  
+}
+
+fn solve_part2 () {
+  println!("Day #DAY#: Part 2");
+  println!("GOAL: #GOAL2#");
+  println!("ANSWER: #ANSWER2#");
+}
+
+fn main() {
+  solve_part1()
+  solve_part2()
+}

@@ -1,3 +1,6 @@
+# git - personal account
+Use GitHub Desktop to do checkins from personal account!
+
 # create a new project
 cargo new <name>
 

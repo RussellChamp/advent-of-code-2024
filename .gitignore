@@ -22,4 +22,5 @@ Cargo.lock
 
 *.exe
 
-input.txt
+data.txt
+test-data.txt

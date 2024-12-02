@@ -1,12 +1,20 @@
 // Day #DAY#: #TITLE#
 
-use std::env;
-use std::fs;
+use std::fs::File;
+use std::io::{self, BufRead};
+use std::path::Path;
+use regex::Regex;
 
 fn solve_part1() {
   println!("Day #DAY#: Part 1");
   println!("GOAL: #GOAL1#");
-  println!("ANSWER: #ANSWER1#");  
+  println!("ANSWER: #ANSWER1#");
+
+  if let Ok(lines) = read_lines("./data.txt") {
+    for line in lines.flatten() {
+      ...
+    }
+  }
 }
 
 fn solve_part2 () {
@@ -18,4 +26,10 @@ fn solve_part2 () {
 fn main() {
   solve_part1()
   solve_part2()
+}
+
+fn read_lines<P>(filename: P) -> io::Result<io::Lines<io::BufReader<File>>>
+where P: AsRef<Path>, {
+    let file = File::open(filename)?;
+    Ok(io::BufReader::new(file).lines())
 }

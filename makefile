@@ -5,6 +5,7 @@ init:
 	cargo new day$(day)
 	sed 's/#DAY#/$(day)/g' main.rs.template | sed 's/#TITLE#/$(title)/g' > day$(day)/src/main.rs
 	touch day$(day)/data.txt
+	cd day$(day) && cargo add regex
 
 build:
 	cd ./day$(day) &&	cargo build
